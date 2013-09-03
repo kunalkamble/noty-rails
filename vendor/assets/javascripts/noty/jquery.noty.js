@@ -436,17 +436,6 @@ function noty(options) {
 		options.theme = 'default';
 	}
 
-	if (!options.hasOwnProperty('dismissQueue')) {
-		if (options.layout == 'topLeft'
-			|| options.layout == 'topRight' 
-			|| options.layout == 'bottomLeft'
-			|| options.layout == 'bottomRight') {
-			options.dismissQueue = true;
-		} else {
-			options.dismissQueue = false;
-		}
-	}
-
 	if (options.buttons) {
 		jQuery.each(options.buttons, function(i, button) {
 			if (button.click) {
